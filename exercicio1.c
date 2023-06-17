@@ -1,4 +1,9 @@
-// 7) Alocação dinamica screva um programa que leia primeiro os 6 ...
+/* 7. Escreva um programa que leia primeiro os 6 n ´umeros gerados pela loteria e depois os 6
+n ´umeros do seu bilhete. O programa ent ˜ao compara quantos n ´umeros o jogador acertou.
+Em seguida, ele aloca espac¸o para um vetor de tamanho igual a quantidade de n ´umeros
+corretos e guarda os n ´umeros corretos nesse vetor. Finalmente, o programa exibe os
+n ´umeros sorteados e os seus n ´umeros corretos.
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
