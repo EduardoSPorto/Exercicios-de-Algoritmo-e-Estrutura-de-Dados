@@ -1,8 +1,12 @@
-/* 7. Escreva um programa que leia primeiro os 6 n ´umeros gerados pela loteria e depois os 6
-n ´umeros do seu bilhete. O programa ent ˜ao compara quantos n ´umeros o jogador acertou.
-Em seguida, ele aloca espac¸o para um vetor de tamanho igual a quantidade de n ´umeros
-corretos e guarda os n ´umeros corretos nesse vetor. Finalmente, o programa exibe os
-n ´umeros sorteados e os seus n ´umeros corretos.
+/* 
+-7. Escreva um programa que leia primeiro os 6 numeros gerados pela loteria e depois os 6
+numeros do seu bilhete. O programa ent nao compara quantos numeros o jogador acertou.
+Em seguida, ele aloca espac¸o para um vetor de tamanho igual a quantidade de numeros
+corretos e guarda os numeros corretos nesse vetor. Finalmente, o programa exibe os
+numeros sorteados e os seus n ´umeros corretos.
+
+-https://www.facom.ufu.br/~backes/wordpress/ListaC10.pdf
+
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,7 +21,7 @@ typedef struct list lista;
 lista *cabeca;
 void colocaLista(int acerto);
 
-int main (){
+int main(){
     int sorteado[5],i,c,escolhido[5],iguais=0;
     
     cabeca = (lista*) malloc(sizeof(lista));
@@ -47,20 +51,20 @@ int main (){
 		}
 	}
 	}
-	printf("\nNumero de iguais: %d\n\n",iguais);
-	printf("Numeros acertados");
+	printf("\nNumero de iguais: %d",iguais);
+	
+	printf("\nNumeros acertados: ");
 	while(cabeca->prox!= NULL){
 		cabeca=cabeca->prox;
 		printf("%d",cabeca->n);
-	}
-	
-	printf("\n\nSorteados");
+	}	
+	printf("\nSorteados: ");
 	i=0;
 	while(i!=6){
 		printf("%d",sorteado[i]);
 		i++;
 	}
-
+	printf("\n");
 	
 	/*
 	Teste de guardar informação
