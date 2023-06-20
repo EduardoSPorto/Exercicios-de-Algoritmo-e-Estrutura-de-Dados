@@ -20,50 +20,56 @@ typedef struct list lista;
 
 lista *cabeca;
 void colocaLista(int acerto);
+//void e  tranforma o criar em um ponteiro
+lista *criarFunção(void);
 
 int main(){
-    int sorteado[5],i,c,escolhido[5],iguais=0;
-    
-    cabeca = (lista*) malloc(sizeof(lista));
-	cabeca->prox=NULL;
-	
+    int sorteado[5], i, c, escolhido[5], iguais=0;
+
+	cabeca = criarFunção();
 	/*
 	Teste de funcionamento da estrutura
 	if (nun->prox==NULL)
 		printf("<<>>");
 	
 	*/
-	for(i=0;i<=5;i++){
-	printf("Diga um numero %d da loteria ",i+1);
-	scanf("%d",&sorteado[i]);
+	for(i=0; i <= 5; i++){
+		printf("Diga um numero %d da loteria ",i+1);
+		scanf("%d", &sorteado[i]);
 }
 	
-	for(i=0;i<=5;i++){
-	printf("Diga um numero %d para o bilhete ",i+1);
-	scanf("%d",&escolhido[i]);
+	for(i=0; i <= 5; i++){
+		printf("Diga um numero %d para o bilhete ",i+1);
+		scanf("%d", &escolhido[i]);
 	}
 	
-	for(i=0;i<=5;i++){
-	for(c=0;c<=5;c++){
-		if(sorteado[i]==escolhido[c]){
+	for(i = 0; i <= 5; i++){
+	for(c = 0; c <= 5; c++){
+		if(sorteado[i] == escolhido[c]){
 			iguais++;
 			colocaLista(sorteado[i]); 
 		}
 	}
 	}
+
 	printf("\nNumero de iguais: %d",iguais);
 	
 	printf("\nNumeros acertados: ");
-	while(cabeca->prox!= NULL){
-		cabeca=cabeca->prox;
+
+	while(cabeca-> prox != NULL){
+		cabeca = cabeca->prox;
 		printf("%d",cabeca->n);
-	}	
+	}
+
 	printf("\nSorteados: ");
+	
 	i=0;
-	while(i!=6){
+	
+	while(i != 6){
 		printf("%d",sorteado[i]);
 		i++;
 	}
+	
 	printf("\n");
 	
 	/*
@@ -90,10 +96,8 @@ int main(){
 void colocaLista(int acerto){
 
 	lista *temp,*cab=cabeca;
-	
-	temp = (lista*) malloc(sizeof(lista));
-	temp->prox = NULL;
-	
+
+	temp = criarFunção();;
 	/*
 	Teste de alocação
 
@@ -103,10 +107,18 @@ void colocaLista(int acerto){
 
 	temp->n = acerto;
 	/*
-	Testando seleção correta de numeros similares e testando o conteudo de temp
+	Testando seleção correta de numeros similares e testando o conteudo de "temp"
+
 	printf("%d",temp->n);
 	*/
-	temp->prox=cab->prox;
+	temp->prox = cab->prox;
 	cab->prox = temp;
 	
 }
+
+	lista *criarFunção(void){
+		lista *novo;
+		novo = (lista*) malloc(sizeof(lista));
+		novo->prox=NULL;
+		return novo;
+	}
