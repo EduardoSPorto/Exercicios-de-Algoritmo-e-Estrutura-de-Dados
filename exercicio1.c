@@ -10,6 +10,7 @@ numeros sorteados e os seus n ´umeros corretos.
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 struct list{
     int n;
@@ -19,29 +20,42 @@ struct list{
 typedef struct list lista;
 
 lista *cabeca;
+int digitoAleatorio(void);
+
 void colocaLista(int acerto);
 //void e  tranforma o criar em um ponteiro
 lista *criarFunção(void);
 
 int main(){
-    int sorteado[5], i, c, escolhido[5], iguais=0;
+    int sorteado[5], i=0, c=0, escolhido[5], iguais=0;
+
+	srand(time(NULL));
 
 	cabeca = criarFunção();
+	
+	while(i != 6){
+		sorteado[i] = digitoAleatorio();
+		i++;
+
+	}
 	/*
 	Teste de funcionamento da estrutura
 	if (nun->prox==NULL)
 		printf("<<>>");
 	
 	*/
+	/*
 	for(i=0; i <= 5; i++){
 		printf("Diga um numero %d da loteria ",i+1);
 		scanf("%d", &sorteado[i]);
 }
+	*/
+	i=0;
 	
 	for(i=0; i <= 5; i++){
 		printf("Diga um numero %d para o bilhete ",i+1);
 		scanf("%d", &escolhido[i]);
-	}
+	};
 	
 	for(i = 0; i <= 5; i++){
 	for(c = 0; c <= 5; c++){
@@ -58,7 +72,7 @@ int main(){
 
 	while(cabeca-> prox != NULL){
 		cabeca = cabeca->prox;
-		printf("%d",cabeca->n);
+		printf("%d ",cabeca->n);
 	}
 
 	printf("\nSorteados: ");
@@ -66,7 +80,7 @@ int main(){
 	i=0;
 	
 	while(i != 6){
-		printf("%d",sorteado[i]);
+		printf("%d ",sorteado[i]);
 		i++;
 	}
 	
@@ -121,4 +135,10 @@ void colocaLista(int acerto){
 		novo = (lista*) malloc(sizeof(lista));
 		novo->prox=NULL;
 		return novo;
+	}
+
+	int digitoAleatorio(void){
+		int numero = 17;
+		numero = rand()%10;
+		return numero;
 	}
