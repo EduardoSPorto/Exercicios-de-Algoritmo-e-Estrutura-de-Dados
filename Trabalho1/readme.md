@@ -1,7 +1,8 @@
 # Trabalho prático 1 - Turma M1
 
-Aluno: Eduardo S. Porto
-Problema: [shortest-completing-word](leetcode.com/problems/shortest-completing-word)
+**Aluno: Eduardo S. Porto**
+
+**Problema: [shortest-completing-word](leetcode.com/problems/shortest-completing-word)**
 
 -Primeiro se buscou isolar os caracteres uteis dentre os membros de "licensePlate", os uteis são definidos por serem parte do alfabeto
 
