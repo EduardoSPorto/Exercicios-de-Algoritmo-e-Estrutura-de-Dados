@@ -23,13 +23,13 @@ steps
 words [ ] = { "looks", "pest", "stew", "show" };
 licensePlate [ ] = "1s3 456";
 //Output
-steps
+pest
 ```
 ```
 //input
 words [ ] = { "pl","step","steps","stripe","stepple" };
 licensePlate [ ] = "1PLE";
 //Output
-steps
+stepple
 ```
 
