@@ -1,35 +1,32 @@
-# Trabalho prático 1 - Turma M1
+# Trabalho prático 2 - Turma M1
 
 **Aluno: Eduardo S. Porto**
 
-**Problema: [shortest-completing-word](leetcode.com/problems/shortest-completing-word)**
+**Problema: [minimum-amount-of-time-to-fill-cups](https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups/)**
 
--Primeiro se buscou isolar os caracteres uteis dentre os membros de "licensePlate", os uteis são definidos por serem parte do alfabeto
+-Organiza a lista constantemente de forma que as temperaturas que são mais numerosas fiquem no começo;
 
--Depois se isolou as palavras que contem todas as letras da versão util de licensePlate
+-Como os dois primeiros copos são diferentes é garantido a possibilidade de gastar 1 segundos para servi-los;
 
--Por último uma lista (baseada nas palavras anterior) é ordenada para descobrir a palavra de menor tamanho (ou seja, o resultado)
+-Quando não existirem mais pares de temperatura diferente gasta-se um segundo para cada copo;
 
 Exemplos de resultado
 ```
 //input
-words [ ] = { "step", "steps", "stipe", "steeple" };
-licensePlate [ ] = "1s3 PSt";
+Fria, morna e quente: 5 4 4
 //Output
-steps
+Segundos mínimos = 7
 ```
 ```
 //input
-words [ ] = { "looks", "pest", "stew", "show" };
-licensePlate [ ] = "1s3 456";
+Fria, morna e quente: 5 2 5
 //Output
-pest
+Segundos mínimos =  6
 ```
 ```
 //input
-words [ ] = { "pl","step","steps","stripe","stepple" };
-licensePlate [ ] = "1PLE";
+Fria, morna e quente: 5 0 0
 //Output
-stepple
+Segundos mínimos = 5
 ```
 
