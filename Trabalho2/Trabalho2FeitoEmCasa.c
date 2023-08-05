@@ -4,9 +4,10 @@
 int fillCups(int* amount, int amountSize);
 int main()
 {
-    int amount [ ] = { 5 , 4 , 4 };
+    int amount [ ] = { 5 , 0 , 0 };
     int amountSize = 3;
-    printf ( "\nR = %d" , fillCups ( amount , amountSize ) );
+    printf ( "Fria, morna e quente: %d %d %d" , amount [ 0 ] , amount [ 1 ] , amount [ 2 ] );
+    printf ( "\nSegundos minimos = %d\n\n" , fillCups ( amount , amountSize ) );
 
     return 0;
 }
