@@ -5,8 +5,7 @@
 **Problema: [Second Minimum Node In a Binary Tree](https://leetcode.com/problems/second-minimum-node-in-a-binary-tree)**
 
 - Aproveitando-se da objetividade de " valor pai = valor do menor filho" e procurando os menores números que não se encaixam nesta dinâmica, logo encontrando o segundo menor;
-
--Também retornando -1 caso a função não tiver um segundo menor;
+- Também retornando -1 caso a função não tiver um segundo menor;
 
 Exemplos de resultado
 ```
