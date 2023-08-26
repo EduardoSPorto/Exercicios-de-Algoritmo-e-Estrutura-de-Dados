@@ -1,32 +1,30 @@
-# Trabalho prático 2 - Turma M1
+# Trabalho prático 3 - Turma M1
 
 **Aluno: Eduardo S. Porto**
 
-**Problema: [minimum-amount-of-time-to-fill-cups](https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups/)**
+**Problema: [Second Minimum Node In a Binary Tree](https://leetcode.com/problems/second-minimum-node-in-a-binary-tree)**
 
--Organiza a lista constantemente de forma que as temperaturas que são mais numerosas fiquem no começo;
+- Aproveitando-se da objetividade de " valor pai = valor do menor filho" e procurando os menores números que não se encaixam nesta dinâmica, logo encontrando o segundo menor;
 
--Como os dois primeiros copos são diferentes é garantido a possibilidade de gastar 1 segundos para servi-los;
-
--Quando não existirem mais pares de temperatura diferente gasta-se um segundo para cada copo;
+-Também retornando -1 caso a função não tiver um segundo menor;
 
 Exemplos de resultado
 ```
-//input
-Fria, morna e quente: 5 4 4
+//Input
+A composição da árvore é: [2,2,5,null,null,5,7]
 //Output
-Segundos mínimos = 7
+Segundo menor = 5
 ```
 ```
-//input
-Fria, morna e quente: 5 2 5
+//Input
+A composição da árvore é: [2,2,2]
 //Output
-Segundos mínimos =  6
+Segundo menor =  -1
 ```
 ```
-//input
-Fria, morna e quente: 5 0 0
+//Input
+A composição da árvore é: [1,1,3,1,1,3,4,3,1]
 //Output
-Segundos mínimos = 5
+Segundo menor = 3
 ```
 
