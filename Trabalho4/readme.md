@@ -4,8 +4,8 @@
 
 **Problema: [Merge Intervals](https://leetcode.com/problems/merge-intervals/)**
 
-- Primeira parte do resumo;
-- Segunda parte do resumo;
+- Primeiro ordena e remove os intervalos que se sobrepõem;
+- Aloca o espaço correto e coloca o conteúdo desejado;
 
 Exemplos de resultado
 ```
